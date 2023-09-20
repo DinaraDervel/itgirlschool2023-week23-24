@@ -4,20 +4,23 @@ const Tariff = (props) => {
   let headerClass = styles.card__header;
   let priceClass = styles.card__price;
   if (props.info.color === "blue") {
-    headerClass += ` ` + styles.card_blue__header;
-    priceClass += ` ` + styles.card_blue__price;
+    headerClass += " " + styles.card_blue__header;
+    priceClass += " " + styles.card_blue__price;
   }
   if (props.info.color === "green") {
-    headerClass += ` ` + styles.card_green__header;
-    priceClass += ` ` + styles.card_green__price;
+    headerClass += " " + styles.card_green__header;
+    priceClass += " " + styles.card_green__price;
   }
   if (props.info.color === "red") {
-    headerClass += ` ` + styles.card_red__header;
-    priceClass += ` ` + styles.card_red__price;
+    headerClass += " " + styles.card_red__header;
+    priceClass += " " + styles.card_red__price;
   }
   if (props.info.color === "black") {
-    headerClass += ` ` + styles.card_black__header;
-    priceClass += ` ` + styles.card_black__price;
+    headerClass += " " + styles.card_black__header;
+    priceClass += " " + styles.card_black__price;
+  }
+  if (props.info.isSelected) {
+    headerClass += " " + styles.card_isSelected__header;
   }
   return (
     <div className={styles.card}>

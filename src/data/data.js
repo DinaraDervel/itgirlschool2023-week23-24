@@ -22,7 +22,7 @@ const arrayOfTariffs = [
         speed: 'до 100 Мбит/сек',
         info: 'Объем включенного трафика не ограничен',
         color: 'red',
-        isSelected: true,
+        isSelected: true
     },
     {
         id: 4,

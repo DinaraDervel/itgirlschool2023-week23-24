@@ -78,4 +78,11 @@
       background-color: rgb(50, 37, 34);
     }
   }
+  //стили выделенной карточки
+  &_isSelected {
+    &__header {
+      margin-top: -10px;
+      padding: 20px;
+    }
+  }
 }
