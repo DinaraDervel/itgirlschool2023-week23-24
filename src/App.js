@@ -5,7 +5,7 @@ import arrayOfTariffs from './data/data'
 function App() {
   return (
     <div className="App">
-      {arrayOfTariffs.map((tariff) => <Tariff info={tariff} />)}
+      {arrayOfTariffs.map((tariff) => <Tariff info={tariff} key={tariff.id} />)}
     </div>
   );
 }

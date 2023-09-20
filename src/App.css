@@ -1,6 +1,8 @@
 .App {
+  margin: 20px auto;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
 }
