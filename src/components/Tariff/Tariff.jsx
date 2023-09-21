@@ -1,12 +1,7 @@
-import { useState } from "react";
 import styles from "./Tariff.module.scss";
 
 const Tariff = (props) => {
-  const { name, price, speed, info, color } = props.info;
-  const [isSelected, setSelected] = useState(false);
-  const handleChange = () => {
-    setSelected(!isSelected);
-  };
+  const { id, name, price, speed, info: infoText, color } = props.info;
 
   //условная стилизация
   let headerClass = styles.card__header;
@@ -31,10 +26,16 @@ const Tariff = (props) => {
     default:
       break;
   }
-  if (isSelected) headerClass += ` ${styles.card_isSelected__header}`;
+  if (props.selectedId === id)
+    headerClass += ` ${styles.card_isSelected__header}`;
 
   return (
-    <div className={styles.card} onClick={handleChange}>
+    <div
+      className={styles.card}
+      onClick={() => {
+        props.onClick(id);
+      }}
+    >
       <div className={headerClass}>{name}</div>
       <div className={priceClass}>
         <p>руб</p>
@@ -43,7 +44,7 @@ const Tariff = (props) => {
         </p>
       </div>
       <div className={styles.card__speed}>{speed}</div>
-      <div className={styles.card__info}>{info}</div>
+      <div className={styles.card__info}>{infoText}</div>
     </div>
   );
 };
