@@ -21,8 +21,7 @@ const arrayOfTariffs = [
         price: '550',
         speed: 'до 100 Мбит/сек',
         info: 'Объем включенного трафика не ограничен',
-        color: 'red',
-        isSelected: true
+        color: 'red'
     },
     {
         id: 4,
